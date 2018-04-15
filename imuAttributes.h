@@ -1,19 +1,20 @@
 #include <LSM6.h>
 
-struct lsm6d_sensor
+struct _lsm6d_sensor
 {
   uint8_t accGyroUUID[16];
   uint8_t accGyroID; 
-  uint8_t timeStamp;
+  int timeStamp;  
 
-  int gyroX;
-  int gyroY;
-  int gyroZ;
+  short gyroX;
+  short gyroY;
+  short gyroZ;
 
-  int accX;
-  int accY;
-  int accZ;
-  
+  short accX;
+  short accY;
+  short accZ;
 
-  LSM6 imu
-}
+  LSM6 imu;
+};
+
+typedef  _lsm6d_sensor lsm6d_sensor;
