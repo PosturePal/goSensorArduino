@@ -10,6 +10,7 @@ struct _lsm6d_sensor
   short gyroY;
   short gyroZ;
 
+
   short accX;
   short accY;
   short accZ;

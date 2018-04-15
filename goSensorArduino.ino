@@ -169,6 +169,8 @@ void setup()
 
 void loop(void)
 {
-  
+
+  read_sensor_data();
+  generate_packege();
   
 }

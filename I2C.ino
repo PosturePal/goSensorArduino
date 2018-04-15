@@ -45,8 +45,19 @@ void init_sensors()
 
 void read_sensor_data()
 {
-  sensor.imu.readGyro();
   sensor.imu.readAcc();
+  sensor.accX = sensor.imu.a.x;
+  sensor.accY = sensor.imu.a.y;
+  sensor.accZ = sensor.imu.a.z;
+
+  sensor.imu.readGyro();
+  sensor.gyroX = sensor.imu.g.x;
+  sensor.gyroY = sensor.imu.g.y;
+  sensor.gyroZ = sensor.imu.g.z;
+
+
+  
+
 
 }
 
