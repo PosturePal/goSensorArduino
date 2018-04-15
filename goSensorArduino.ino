@@ -54,12 +54,14 @@ uint8_t sensorServiceUUID[] {0xfc, 0xed, 0x64, 0x08, 0xc0, 0x15, 0x45, 0xea, 0xb
 /* declare inertial sensor*/
 lsm6d_sensor sensor;
 
-void init_characteristics(lsm6d_sensor s)
+void init_characteristics()
 {
 
+  memcpy(sensor.accGyroUUID, sensorServiceUUID, 16);
+  sensor.accGyroUUID[3] += 0x01; //prosto edenica i troika
   Serial.println("- adding gyro and acc characteristic");
-  s.accGyroID = gatt.addCharacteristic(s.accGyroUUID, GATT_CHARS_PROPERTIES_READ, 1, 20, BLE_DATATYPE_STRING);
-  if (s.accGyroID == 0)
+  sensor.accGyroID = gatt.addCharacteristic(sensor.accGyroUUID, GATT_CHARS_PROPERTIES_READ, 1, 20, BLE_DATATYPE_STRING);
+  if (sensor.accGyroID == 0)
   {
     error(F("Failed to init characteristic"));
   }
@@ -83,7 +85,7 @@ void setup_gatt()
   }
   ble.atcommand("AT+GATTLIST");
 
-  init_characteristics(sensor);
+  init_characteristics();
 
   // Serial.println("Adding sensors service UUID to the advertising payload");
   // uint8_t advdata[] { 0x02, 0x01, 0x06, 0x11, 0x06, 0x6d, 0x2f, 0x1c, 0x2a, 0xe3, 0x1d, 0x0d, 0xb5, 0xea, 0x45, 0x15, 0xc0, 0x08, 0x64, 0xfc };
