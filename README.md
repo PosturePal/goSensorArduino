@@ -1,5 +1,6 @@
 # goSensorArduino
 
+[![N|Solid](https://github.com/PosturePal/goSensorArduino/blob/master/img/go-logo-boxing-white-fb.png)]()
 
 
 GoSensor is a wearable posture coach. This repository conteins code of the one of the first arduino based prototypes
