@@ -11,12 +11,11 @@ GoSensor is a wearable posture coach. This repository conteins code of the one o
   - [BLE module](https://www.adafruit.com/product/2479) 
   - [Li-po battery](https://www.adafruit.com/product/1578)
   - [Lithium charge controller](https://www.banggood.com/Micro-USB-TP4056-Charge-And-Discharge-Protection-Module-Over-Current-Over-Voltage-Protection-18650-p-1183439.html?utm_source=google&utm_medium=cpc_ods&utm_content=nancy&utm_campaign=content-sdsrm-india&gclid=Cj0KCQjw4-XlBRDuARIsAK96p3AiNVXg0K-YPiaph6ki88_5qstb3HhPgJNOtkThF3KFCOdh2K6cHi0aAlZ6EALw_wcB&cur_warehouse=CN)
+  
 
 #####  Wiring
 
-  - Import a HTML file and watch it magically convert to Markdown
-  - Drag and drop images (requires your Dropbox account be linked)
-
+[![N|Solid](https://github.com/PosturePal/goSensorArduino/blob/master/img/sketch.png)]()
 
 #####  Code Structure
 - I2C.ino  - implements  configuration and getting data from IMU through I2C
